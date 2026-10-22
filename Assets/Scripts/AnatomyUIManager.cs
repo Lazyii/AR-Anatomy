@@ -1383,6 +1383,182 @@ private void SetupData()
     childData["NinthCostalCartilage"] = new string[] { "NinthCostalCartilageLeft", "NinthCostalCartilageRight" };
     childData["TenthCostalCartilage"] = new string[] { "TenthCostalCartilageLeft", "TenthCostalCartilageRight" };
 
+        ///PectoralGirdle----------------------------------///
+    childData["PectoralGirdle"] = new string[]
+    {
+        "Clavicle",
+        "Scapula"
+    };
+
+    childData["Clavicle"] = new string[]
+    {
+        "ClavicleLeft",
+        "ClavicleRight"
+    };
+
+    childData["Scapula"] = new string[]
+    {
+        "ScapulaLeft",
+        "ScapulaRight"
+    };
+
+        ///UpperLimb----------------------------------///
+    childData["UpperLimb"] = new string[]
+    {
+        "Humerus",
+        "Forearm",
+        "Hand"
+    };
+
+    childData["Humerus"] = new string[]
+    {
+        "HumerusLeft",
+        "HumerusRight"
+    };
+
+    childData["Forearm"] = new string[]
+    {
+        "Radius",
+        "Ulna"
+    };
+
+    childData["Radius"] = new string[] { "RadiusLeft", "RadiusRight" };
+    childData["Ulna"] = new string[] { "UlnaLeft", "UlnaRight" };
+
+    childData["Hand"] = new string[]
+    {
+        "CarpalBones",
+        "MetacarpalBones",
+        "Phalanges"
+    };
+
+    childData["CarpalBones"] = new string[]
+    {
+        "Scaphoid",
+        "Lunate",
+        "Triquetrum",
+        "Pisiform",
+        "Trapezium",
+        "Trapezoid",
+        "Capitate",
+        "Hamate"
+    };
+
+    childData["Scaphoid"] = new string[] { "ScaphoidLeft", "ScaphoidRight" };
+    childData["Lunate"] = new string[] { "LunateLeft", "LunateRight" };
+    childData["Triquetrum"] = new string[] { "TriquetrumLeft", "TriquetrumRight" };
+    childData["Pisiform"] = new string[] { "PisiformLeft", "PisiformRight" };
+    childData["Trapezium"] = new string[] { "TrapeziumLeft", "TrapeziumRight" };
+    childData["Trapezoid"] = new string[] { "TrapezoidLeft", "TrapezoidRight" };
+    childData["Capitate"] = new string[] { "CapitateLeft", "CapitateRight" };
+    childData["Hamate"] = new string[] { "HamateLeft", "HamateRight" };
+
+    childData["MetacarpalBones"] = new string[]
+    {
+        "FirstMetacarpal",
+        "SecondMetacarpal",
+        "ThirdMetacarpal",
+        "FourthMetacarpal",
+        "FifthMetacarpal"
+    };
+
+    childData["FirstMetacarpal"] = new string[] { "FirstMetacarpalLeft", "FirstMetacarpalRight" };
+    childData["SecondMetacarpal"] = new string[] { "SecondMetacarpalLeft", "SecondMetacarpalRight" };
+    childData["ThirdMetacarpal"] = new string[] { "ThirdMetacarpalLeft", "ThirdMetacarpalRight" };
+    childData["FourthMetacarpal"] = new string[] { "FourthMetacarpalLeft", "FourthMetacarpalRight" };
+    childData["FifthMetacarpal"] = new string[] { "FifthMetacarpalLeft", "FifthMetacarpalRight" };
+
+    childData["Phalanges"] = new string[]
+    {
+        "ThumbProximalPhalanx",
+        "ThumbDistalPhalanx",
+        "IndexProximalPhalanx",
+        "IndexMiddlePhalanx",
+        "IndexDistalPhalanx",
+        "MiddleProximalPhalanx",
+        "MiddleMiddlePhalanx",
+        "MiddleDistalPhalanx",
+        "RingProximalPhalanx",
+        "RingMiddlePhalanx",
+        "RingDistalPhalanx",
+        "LittleProximalPhalanx",
+        "LittleMiddlePhalanx",
+        "LittleDistalPhalanx"
+    };
+
+    childData["ThumbProximalPhalanx"] = new string[] { "ThumbProximalPhalanxLeft", "ThumbProximalPhalanxRight" };
+    childData["ThumbDistalPhalanx"] = new string[] { "ThumbDistalPhalanxLeft", "ThumbDistalPhalanxRight" };
+
+    childData["IndexProximalPhalanx"] = new string[] { "IndexProximalPhalanxLeft", "IndexProximalPhalanxRight" };
+    childData["IndexMiddlePhalanx"] = new string[] { "IndexMiddlePhalanxLeft", "IndexMiddlePhalanxRight" };
+    childData["IndexDistalPhalanx"] = new string[] { "IndexDistalPhalanxLeft", "IndexDistalPhalanxRight" };
+
+    childData["MiddleProximalPhalanx"] = new string[] { "MiddleProximalPhalanxLeft", "MiddleProximalPhalanxRight" };
+    childData["MiddleMiddlePhalanx"] = new string[] { "MiddleMiddlePhalanxLeft", "MiddleMiddlePhalanxRight" };
+    childData["MiddleDistalPhalanx"] = new string[] { "MiddleDistalPhalanxLeft", "MiddleDistalPhalanxRight" };
+
+    childData["RingProximalPhalanx"] = new string[] { "RingProximalPhalanxLeft", "RingProximalPhalanxRight" };
+    childData["RingMiddlePhalanx"] = new string[] { "RingMiddlePhalanxLeft", "RingMiddlePhalanxRight" };
+    childData["RingDistalPhalanx"] = new string[] { "RingDistalPhalanxLeft", "RingDistalPhalanxRight" };
+
+    childData["LittleProximalPhalanx"] = new string[] { "LittleProximalPhalanxLeft", "LittleProximalPhalanxRight" };
+    childData["LittleMiddlePhalanx"] = new string[] { "LittleMiddlePhalanxLeft", "LittleMiddlePhalanxRight" };
+    childData["LittleDistalPhalanx"] = new string[] { "LittleDistalPhalanxLeft", "LittleDistalPhalanxRight" };
+
+        ///PelvicGirdle-------------------------------///
+    childData["PelvicGirdle"] = new string[] { "HipBone" };
+    childData["HipBone"] = new string[] { "HipBoneLeft", "HipBoneRight" };
+
+        ///LowerLimb------------------------------------///
+    childData["LowerLimb"] = new string[] { "Femur", "Patella", "Crus", "Foot" };
+    childData["Femur"] = new string[] { "FemurLeft", "FemurRight" };
+    childData["Patella"] = new string[] { "PatellaLeft", "PatellaRight" };
+
+    childData["Crus"] = new string[] { "Tibia", "Fibula" };
+    childData["Tibia"] = new string[] { "TibiaLeft", "TibiaRight" };
+    childData["Fibula"] = new string[] { "FibulaLeft", "FibulaRight" };
+
+    childData["Foot"] = new string[] { "TarsalBones", "MetatarsalBones", "FootPhalanges", "SesamoidBones" };
+
+    childData["TarsalBones"] = new string[]
+    {
+        "Calcaneus",
+        "Talus",
+        "Navicular",
+        "Cuboid",
+        "CuneiformBones",
+        "MedialCuneiform",
+        "IntermediateCuneiform",
+        "LateralCuneiform"
+    };
+
+    childData["MetatarsalBones"] = new string[]
+    {
+        "FirstMetatarsal",
+        "SecondMetatarsal",
+        "ThirdMetatarsal",
+        "FourthMetatarsal",
+        "FifthMetatarsal"
+    };
+
+    childData["FootPhalanges"] = new string[]
+    {
+        "BigToeProximalPhalanx",
+        "BigToeDistalPhalanx",
+        "SecondToeProximalPhalanx",
+        "SecondToeMiddlePhalanx",
+        "SecondToeDistalPhalanx",
+        "ThirdToeProximalPhalanx",
+        "ThirdToeMiddlePhalanx",
+        "ThirdToeDistalPhalanx",
+        "FourthToeProximalPhalanx",
+        "FourthToeMiddlePhalanx",
+        "FourthToeDistalPhalanx",
+        "FifthToeProximalPhalanx",
+        "FifthToeMiddlePhalanx",
+        "FifthToeDistalPhalanx"
+    };
+
 }
 
 private void BuildParentData()
@@ -2141,7 +2317,163 @@ Dictionary<string, string> displayNames = new Dictionary<string, string>()
     { "NinthCostalCartilageRight", "Ninth Costal Cartilage (Right)" },
     { "TenthCostalCartilage", "Tenth Costal Cartilage" },
     { "TenthCostalCartilageLeft", "Tenth Costal Cartilage (Left)" },
-    { "TenthCostalCartilageRight", "Tenth Costal Cartilage (Right)" }
+    { "TenthCostalCartilageRight", "Tenth Costal Cartilage (Right)" },
+    { "Clavicle", "Clavicle" },
+    { "ClavicleLeft", "Left Clavicle" },
+    { "ClavicleRight", "Right Clavicle" },
+    { "Scapula", "Scapula" },
+    { "ScapulaLeft", "Left Scapula" },
+    { "ScapulaRight", "Right Scapula" },
+    { "Humerus", "Humerus" },
+    { "HumerusLeft", "Left Humerus" },
+    { "HumerusRight", "Right Humerus" },
+
+    { "Forearm", "Forearm" },
+    { "Radius", "Radius" },
+    { "RadiusLeft", "Left Radius" },
+    { "RadiusRight", "Right Radius" },
+    { "Ulna", "Ulna" },
+    { "UlnaLeft", "Left Ulna" },
+    { "UlnaRight", "Right Ulna" },
+
+    { "Hand", "Hand" },
+    { "CarpalBones", "Carpal Bones" },
+    { "Scaphoid", "Scaphoid" },
+    { "ScaphoidLeft", "Left Scaphoid" },
+    { "ScaphoidRight", "Right Scaphoid" },
+    { "Lunate", "Lunate" },
+    { "LunateLeft", "Left Lunate" },
+    { "LunateRight", "Right Lunate" },
+    { "Triquetrum", "Triquetrum" },
+    { "TriquetrumLeft", "Left Triquetrum" },
+    { "TriquetrumRight", "Right Triquetrum" },
+    { "Pisiform", "Pisiform" },
+    { "PisiformLeft", "Left Pisiform" },
+    { "PisiformRight", "Right Pisiform" },
+    { "Trapezium", "Trapezium" },
+    { "TrapeziumLeft", "Left Trapezium" },
+    { "TrapeziumRight", "Right Trapezium" },
+    { "Trapezoid", "Trapezoid" },
+    { "TrapezoidLeft", "Left Trapezoid" },
+    { "TrapezoidRight", "Right Trapezoid" },
+    { "Capitate", "Capitate" },
+    { "CapitateLeft", "Left Capitate" },
+    { "CapitateRight", "Right Capitate" },
+    { "Hamate", "Hamate" },
+    { "HamateLeft", "Left Hamate" },
+    { "HamateRight", "Right Hamate" },
+
+    { "MetacarpalBones", "Metacarpal Bones" },
+    { "FirstMetacarpal", "First Metacarpal" },
+    { "FirstMetacarpalLeft", "Left First Metacarpal" },
+    { "FirstMetacarpalRight", "Right First Metacarpal" },
+    { "SecondMetacarpal", "Second Metacarpal" },
+    { "SecondMetacarpalLeft", "Left Second Metacarpal" },
+    { "SecondMetacarpalRight", "Right Second Metacarpal" },
+    { "ThirdMetacarpal", "Third Metacarpal" },
+    { "ThirdMetacarpalLeft", "Left Third Metacarpal" },
+    { "ThirdMetacarpalRight", "Right Third Metacarpal" },
+    { "FourthMetacarpal", "Fourth Metacarpal" },
+    { "FourthMetacarpalLeft", "Left Fourth Metacarpal" },
+    { "FourthMetacarpalRight", "Right Fourth Metacarpal" },
+    { "FifthMetacarpal", "Fifth Metacarpal" },
+    { "FifthMetacarpalLeft", "Left Fifth Metacarpal" },
+    { "FifthMetacarpalRight", "Right Fifth Metacarpal" },
+
+    { "Phalanges", "Finger Phalanges" },
+    { "ThumbProximalPhalanx", "Thumb Proximal Phalanx" },
+    { "ThumbProximalPhalanxLeft", "Left Thumb Proximal Phalanx" },
+    { "ThumbProximalPhalanxRight", "Right Thumb Proximal Phalanx" },
+    { "ThumbDistalPhalanx", "Thumb Distal Phalanx" },
+    { "ThumbDistalPhalanxLeft", "Left Thumb Distal Phalanx" },
+    { "ThumbDistalPhalanxRight", "Right Thumb Distal Phalanx" },
+
+    { "IndexProximalPhalanx", "Index Proximal Phalanx" },
+    { "IndexProximalPhalanxLeft", "Left Index Proximal Phalanx" },
+    { "IndexProximalPhalanxRight", "Right Index Proximal Phalanx" },
+    { "IndexMiddlePhalanx", "Index Middle Phalanx" },
+    { "IndexMiddlePhalanxLeft", "Left Index Middle Phalanx" },
+    { "IndexMiddlePhalanxRight", "Right Index Middle Phalanx" },
+    { "IndexDistalPhalanx", "Index Distal Phalanx" },
+    { "IndexDistalPhalanxLeft", "Left Index Distal Phalanx" },
+    { "IndexDistalPhalanxRight", "Right Index Distal Phalanx" },
+
+    { "MiddleProximalPhalanx", "Middle Finger Proximal Phalanx" },
+    { "MiddleProximalPhalanxLeft", "Left Middle Finger Proximal Phalanx" },
+    { "MiddleProximalPhalanxRight", "Right Middle Finger Proximal Phalanx" },
+    { "MiddleMiddlePhalanx", "Middle Finger Middle Phalanx" },
+    { "MiddleMiddlePhalanxLeft", "Left Middle Finger Middle Phalanx" },
+    { "MiddleMiddlePhalanxRight", "Right Middle Finger Middle Phalanx" },
+    { "MiddleDistalPhalanx", "Middle Finger Distal Phalanx" },
+    { "MiddleDistalPhalanxLeft", "Left Middle Finger Distal Phalanx" },
+    { "MiddleDistalPhalanxRight", "Right Middle Finger Distal Phalanx" },
+
+    { "RingProximalPhalanx", "Ring Finger Proximal Phalanx" },
+    { "RingProximalPhalanxLeft", "Left Ring Finger Proximal Phalanx" },
+    { "RingProximalPhalanxRight", "Right Ring Finger Proximal Phalanx" },
+    { "RingMiddlePhalanx", "Ring Finger Middle Phalanx" },
+    { "RingMiddlePhalanxLeft", "Left Ring Finger Middle Phalanx" },
+    { "RingMiddlePhalanxRight", "Right Ring Finger Middle Phalanx" },
+    { "RingDistalPhalanx", "Ring Finger Distal Phalanx" },
+    { "RingDistalPhalanxLeft", "Left Ring Finger Distal Phalanx" },
+    { "RingDistalPhalanxRight", "Right Ring Finger Distal Phalanx" },
+
+    { "LittleProximalPhalanx", "Little Finger Proximal Phalanx" },
+    { "LittleProximalPhalanxLeft", "Left Little Finger Proximal Phalanx" },
+    { "LittleProximalPhalanxRight", "Right Little Finger Proximal Phalanx" },
+    { "LittleMiddlePhalanx", "Little Finger Middle Phalanx" },
+    { "LittleMiddlePhalanxLeft", "Left Little Finger Middle Phalanx" },
+    { "LittleMiddlePhalanxRight", "Right Little Finger Middle Phalanx" },
+    { "LittleDistalPhalanx", "Little Finger Distal Phalanx" },
+    { "LittleDistalPhalanxLeft", "Left Little Finger Distal Phalanx" },
+    { "LittleDistalPhalanxRight", "Right Little Finger Distal Phalanx" },
+    { "HipBone", "Hip Bone" },
+    { "HipBoneLeft", "Left Hip Bone" },
+    { "HipBoneRight", "Right Hip Bone" },
+    { "Femur", "Femur" },
+    { "FemurLeft", "Left Femur" },
+    { "FemurRight", "Right Femur" },
+    { "Patella", "Patella" },
+    { "PatellaLeft", "Left Patella" },
+    { "PatellaRight", "Right Patella" },
+    { "Crus", "Leg (Tibia and Fibula)" },
+    { "Tibia", "Tibia" },
+    { "TibiaLeft", "Left Tibia" },
+    { "TibiaRight", "Right Tibia" },
+    { "Fibula", "Fibula" },
+    { "FibulaLeft", "Left Fibula" },
+    { "FibulaRight", "Right Fibula" },
+    { "Foot", "Foot" },
+    { "TarsalBones", "Tarsal Bones" },
+    { "Calcaneus", "Calcaneus" },
+    { "Talus", "Talus" },
+    { "Navicular", "Navicular Bone" },
+    { "Cuboid", "Cuboid Bone" },
+    { "MedialCuneiform", "Medial Cuneiform Bone" },
+    { "IntermediateCuneiform", "Intermediate Cuneiform Bone" },
+    { "LateralCuneiform", "Lateral Cuneiform Bone" },
+    { "MetatarsalBones", "Metatarsal Bones" },
+    { "FirstMetatarsal", "First Metatarsal Bone" },
+    { "SecondMetatarsal", "Second Metatarsal Bone" },
+    { "ThirdMetatarsal", "Third Metatarsal Bone" },
+    { "FourthMetatarsal", "Fourth Metatarsal Bone" },
+    { "FifthMetatarsal", "Fifth Metatarsal Bone" },
+    { "FootPhalanges", "Foot Phalanges" },
+    { "BigToeProximalPhalanx", "Big Toe Proximal Phalanx" },
+    { "BigToeDistalPhalanx", "Big Toe Distal Phalanx" },
+    { "SecondToeProximalPhalanx", "Second Toe Proximal Phalanx" },
+    { "SecondToeMiddlePhalanx", "Second Toe Middle Phalanx" },
+    { "SecondToeDistalPhalanx", "Second Toe Distal Phalanx" },
+    { "ThirdToeProximalPhalanx", "Third Toe Proximal Phalanx" },
+    { "ThirdToeMiddlePhalanx", "Third Toe Middle Phalanx" },
+    { "ThirdToeDistalPhalanx", "Third Toe Distal Phalanx" },
+    { "FourthToeProximalPhalanx", "Fourth Toe Proximal Phalanx" },
+    { "FourthToeMiddlePhalanx", "Fourth Toe Middle Phalanx" },
+    { "FourthToeDistalPhalanx", "Fourth Toe Distal Phalanx" },
+    { "FifthToeProximalPhalanx", "Fifth Toe Proximal Phalanx" },
+    { "FifthToeMiddlePhalanx", "Fifth Toe Middle Phalanx" },
+    { "FifthToeDistalPhalanx", "Fifth Toe Distal Phalanx" },
+    { "SesamoidBones", "Sesamoid Bones of Foot" }
 };
 
 private string GetDisplayName(string key)
@@ -2177,10 +2509,6 @@ private string GetDisplayName(string key)
 
     return result;
 }
-
-
-
-
 
 private void ShowSystem(string systemName)
 {

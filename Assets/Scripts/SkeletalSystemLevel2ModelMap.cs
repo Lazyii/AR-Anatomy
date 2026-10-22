@@ -269,6 +269,393 @@ public class SkeletalSystemLevel2ModelMap : MonoBehaviour
             CombineNodes("ThoracicCage", "Sternum", "Ribs", "CostalCartilages");
         }
 
+        // ==================== PECTORAL GIRDLE ====================
+        AnatomyModelGroup pectoralGirdleGroup = level1ModelMap.GetGroup("PectoralGirdle");
+        List<Transform> pectoralGirdleModels = GetValidModels(pectoralGirdleGroup);
+
+        AddByNames("ClavicleLeft", pectoralGirdleModels, "Clavicle.l");
+        AddByNames("ClavicleRight", pectoralGirdleModels, "Clavicle.r");
+        CombineNodes("Clavicle", "ClavicleLeft", "ClavicleRight");
+
+        AddByNames("ScapulaLeft", pectoralGirdleModels, "Scapula.l");
+        AddByNames("ScapulaRight", pectoralGirdleModels, "Scapula.r");
+        CombineNodes("Scapula", "ScapulaLeft", "ScapulaRight");
+
+        CombineNodes("PectoralGirdle", "Clavicle", "Scapula");
+
+        // ==================== UPPER LIMB ====================
+        AnatomyModelGroup upperLimbGroup = level1ModelMap.GetGroup("UpperLimb");
+        List<Transform> upperLimbModels = GetValidModels(upperLimbGroup);
+
+        // Humerus
+        AddByNames("HumerusLeft", upperLimbModels, "Humerus.l");
+        AddByNames("HumerusRight", upperLimbModels, "Humerus.r");
+        CombineNodes("Humerus", "HumerusLeft", "HumerusRight");
+
+        // Forearm
+        AddByNames("RadiusLeft", upperLimbModels, "Radius.l");
+        AddByNames("RadiusRight", upperLimbModels, "Radius.r");
+        CombineNodes("Radius", "RadiusLeft", "RadiusRight");
+
+        AddByNames("UlnaLeft", upperLimbModels, "Ulna.l");
+        AddByNames("UlnaRight", upperLimbModels, "Ulna.r");
+        CombineNodes("Ulna", "UlnaLeft", "UlnaRight");
+        CombineNodes("Forearm", "Radius", "Ulna");
+
+        // Carpal bones
+        AddByNames("CapitateLeft", upperLimbModels, "Capitate bone.l");
+        AddByNames("CapitateRight", upperLimbModels, "Capitate bone.r");
+        CombineNodes("Capitate", "CapitateLeft", "CapitateRight");
+
+        AddByNames("HamateLeft", upperLimbModels, "Hamate bone.l");
+        AddByNames("HamateRight", upperLimbModels, "Hamate bone.r");
+        CombineNodes("Hamate", "HamateLeft", "HamateRight");
+
+        AddByNames("LunateLeft", upperLimbModels, "Lunate bone.l");
+        AddByNames("LunateRight", upperLimbModels, "Lunate bone.r");
+        CombineNodes("Lunate", "LunateLeft", "LunateRight");
+
+        AddByNames("PisiformLeft", upperLimbModels, "Pisiform bone.l");
+        AddByNames("PisiformRight", upperLimbModels, "Pisiform bone.r");
+        CombineNodes("Pisiform", "PisiformLeft", "PisiformRight");
+
+        AddByNames("ScaphoidLeft", upperLimbModels, "Scaphoid bone.l");
+        AddByNames("ScaphoidRight", upperLimbModels, "Scaphoid bone.r");
+        CombineNodes("Scaphoid", "ScaphoidLeft", "ScaphoidRight");
+
+        AddByNames("TrapeziumLeft", upperLimbModels, "Trapezium bone.l");
+        AddByNames("TrapeziumRight", upperLimbModels, "Trapezium bone.r");
+        CombineNodes("Trapezium", "TrapeziumLeft", "TrapeziumRight");
+
+        AddByNames("TrapezoidLeft", upperLimbModels, "Trapezoid bone.l");
+        AddByNames("TrapezoidRight", upperLimbModels, "Trapezoid bone.r");
+        CombineNodes("Trapezoid", "TrapezoidLeft", "TrapezoidRight");
+
+        AddByNames("TriquetrumLeft", upperLimbModels, "Triquetrum bone.l");
+        AddByNames("TriquetrumRight", upperLimbModels, "Triquetrum bone.r");
+        CombineNodes("Triquetrum", "TriquetrumLeft", "TriquetrumRight");
+
+        CombineNodes(
+            "CarpalBones",
+            "Scaphoid",
+            "Lunate",
+            "Triquetrum",
+            "Pisiform",
+            "Trapezium",
+            "Trapezoid",
+            "Capitate",
+            "Hamate"
+        );
+
+        // Metacarpal bones
+        AddByNames("FirstMetacarpalLeft", upperLimbModels, "First metacarpal bone.l");
+        AddByNames("FirstMetacarpalRight", upperLimbModels, "First metacarpal bone.r");
+        CombineNodes("FirstMetacarpal", "FirstMetacarpalLeft", "FirstMetacarpalRight");
+
+        AddByNames("SecondMetacarpalLeft", upperLimbModels, "Second metacarpal bone.l");
+        AddByNames("SecondMetacarpalRight", upperLimbModels, "Second metacarpal bone.r");
+        CombineNodes("SecondMetacarpal", "SecondMetacarpalLeft", "SecondMetacarpalRight");
+
+        AddByNames("ThirdMetacarpalLeft", upperLimbModels, "Third metacarpal bone.l");
+        AddByNames("ThirdMetacarpalRight", upperLimbModels, "Third metacarpal bone.r");
+        CombineNodes("ThirdMetacarpal", "ThirdMetacarpalLeft", "ThirdMetacarpalRight");
+
+        AddByNames("FourthMetacarpalLeft", upperLimbModels, "Fourth metacarpal bone.l");
+        AddByNames("FourthMetacarpalRight", upperLimbModels, "Fourth metacarpal bone.r");
+        CombineNodes("FourthMetacarpal", "FourthMetacarpalLeft", "FourthMetacarpalRight");
+
+        AddByNames("FifthMetacarpalLeft", upperLimbModels, "Fifth metacarpal bone.l");
+        AddByNames("FifthMetacarpalRight", upperLimbModels, "Fifth metacarpal bone.r");
+        CombineNodes("FifthMetacarpal", "FifthMetacarpalLeft", "FifthMetacarpalRight");
+
+        CombineNodes(
+            "MetacarpalBones",
+            "FirstMetacarpal",
+            "SecondMetacarpal",
+            "ThirdMetacarpal",
+            "FourthMetacarpal",
+            "FifthMetacarpal"
+        );
+
+        // Phalanges: thumb
+        AddByNames("ThumbProximalPhalanxLeft", upperLimbModels, "Proximal phalanx of first finger of hand.l");
+        AddByNames("ThumbProximalPhalanxRight", upperLimbModels, "Proximal phalanx of first finger of hand.r");
+        CombineNodes("ThumbProximalPhalanx", "ThumbProximalPhalanxLeft", "ThumbProximalPhalanxRight");
+
+        AddByNames("ThumbDistalPhalanxLeft", upperLimbModels, "Distal phalanx of first finger of hand.l");
+        AddByNames("ThumbDistalPhalanxRight", upperLimbModels, "Distal phalanx of first finger of hand.r");
+        CombineNodes("ThumbDistalPhalanx", "ThumbDistalPhalanxLeft", "ThumbDistalPhalanxRight");
+
+        // Index finger: second finger
+        AddByNames("IndexProximalPhalanxLeft", upperLimbModels, "Proximal phalanx of second finger of hand.l");
+        AddByNames("IndexProximalPhalanxRight", upperLimbModels, "Proximal phalanx of second finger of hand.r");
+        CombineNodes("IndexProximalPhalanx", "IndexProximalPhalanxLeft", "IndexProximalPhalanxRight");
+
+        AddByNames("IndexMiddlePhalanxLeft", upperLimbModels, "Middle phalanx of second finger of hand.l");
+        AddByNames("IndexMiddlePhalanxRight", upperLimbModels, "Middle phalanx of second finger of hand.r");
+        CombineNodes("IndexMiddlePhalanx", "IndexMiddlePhalanxLeft", "IndexMiddlePhalanxRight");
+
+        AddByNames("IndexDistalPhalanxLeft", upperLimbModels, "Distal phalanx of second finger of hand.l");
+        AddByNames("IndexDistalPhalanxRight", upperLimbModels, "Distal phalanx of second finger of hand.r");
+        CombineNodes("IndexDistalPhalanx", "IndexDistalPhalanxLeft", "IndexDistalPhalanxRight");
+
+        // Middle finger: third finger
+        AddByNames("MiddleProximalPhalanxLeft", upperLimbModels, "Proximal phalanx of third finger of hand.l");
+        AddByNames("MiddleProximalPhalanxRight", upperLimbModels, "Proximal phalanx of third finger of hand.r");
+        CombineNodes("MiddleProximalPhalanx", "MiddleProximalPhalanxLeft", "MiddleProximalPhalanxRight");
+
+        AddByNames("MiddleMiddlePhalanxLeft", upperLimbModels, "Middle phalanx of third finger of hand.l");
+        AddByNames("MiddleMiddlePhalanxRight", upperLimbModels, "Middle phalanx of third finger of hand.r");
+        CombineNodes("MiddleMiddlePhalanx", "MiddleMiddlePhalanxLeft", "MiddleMiddlePhalanxRight");
+
+        AddByNames("MiddleDistalPhalanxLeft", upperLimbModels, "Distal phalanx of third finger of hand.l");
+        AddByNames("MiddleDistalPhalanxRight", upperLimbModels, "Distal phalanx of third finger of hand.r");
+        CombineNodes("MiddleDistalPhalanx", "MiddleDistalPhalanxLeft", "MiddleDistalPhalanxRight");
+
+        // Ring finger: fourth finger
+        AddByNames("RingProximalPhalanxLeft", upperLimbModels, "Proximal phalanx of fourth finger of hand.l");
+        AddByNames("RingProximalPhalanxRight", upperLimbModels, "Proximal phalanx of fourth finger of hand.r");
+        CombineNodes("RingProximalPhalanx", "RingProximalPhalanxLeft", "RingProximalPhalanxRight");
+
+        AddByNames("RingMiddlePhalanxLeft", upperLimbModels, "Middle phalanx of fourth finger of hand.l");
+        AddByNames("RingMiddlePhalanxRight", upperLimbModels, "Middle phalanx of fourth finger of hand.r");
+        CombineNodes("RingMiddlePhalanx", "RingMiddlePhalanxLeft", "RingMiddlePhalanxRight");
+
+        AddByNames("RingDistalPhalanxLeft", upperLimbModels, "Distal phalanx of fourth finger of hand.l");
+        AddByNames("RingDistalPhalanxRight", upperLimbModels, "Distal phalanx of fourth finger of hand.r");
+        CombineNodes("RingDistalPhalanx", "RingDistalPhalanxLeft", "RingDistalPhalanxRight");
+
+        // Little finger: fifth finger
+        AddByNames("LittleProximalPhalanxLeft", upperLimbModels, "Proximal phalanx of fifth finger of hand.l");
+        AddByNames("LittleProximalPhalanxRight", upperLimbModels, "Proximal phalanx of fifth finger of hand.r");
+        CombineNodes("LittleProximalPhalanx", "LittleProximalPhalanxLeft", "LittleProximalPhalanxRight");
+
+        AddByNames("LittleMiddlePhalanxLeft", upperLimbModels, "Middle phalanx of fifth finger of hand.l");
+        AddByNames("LittleMiddlePhalanxRight", upperLimbModels, "Middle phalanx of fifth finger of hand.r");
+        CombineNodes("LittleMiddlePhalanx", "LittleMiddlePhalanxLeft", "LittleMiddlePhalanxRight");
+
+        AddByNames("LittleDistalPhalanxLeft", upperLimbModels, "Distal phalanx of fifth finger of hand.l");
+        AddByNames("LittleDistalPhalanxRight", upperLimbModels, "Distal phalanx of fifth finger of hand.r");
+        CombineNodes("LittleDistalPhalanx", "LittleDistalPhalanxLeft", "LittleDistalPhalanxRight");
+
+        // Gộp nhóm đốt ngón tay
+        CombineNodes(
+            "Phalanges",
+            "ThumbProximalPhalanx",
+            "ThumbDistalPhalanx",
+            "IndexProximalPhalanx",
+            "IndexMiddlePhalanx",
+            "IndexDistalPhalanx",
+            "MiddleProximalPhalanx",
+            "MiddleMiddlePhalanx",
+            "MiddleDistalPhalanx",
+            "RingProximalPhalanx",
+            "RingMiddlePhalanx",
+            "RingDistalPhalanx",
+            "LittleProximalPhalanx",
+            "LittleMiddlePhalanx",
+            "LittleDistalPhalanx"
+        );
+
+        // Gộp toàn bộ bàn tay và chi trên
+        CombineNodes("Hand", "CarpalBones", "MetacarpalBones", "Phalanges");
+        CombineNodes("UpperLimb", "Humerus", "Forearm", "Hand");
+
+        // ==================== PelvicGirdle ====================
+        AnatomyModelGroup pelvicGirdleGroup = level1ModelMap.GetGroup("PelvicGirdle");
+        List<Transform> pelvicGirdleModels = GetValidModels(pelvicGirdleGroup);
+
+        AddByNames("HipBoneLeft", pelvicGirdleModels, "Hip bone.l");
+        AddByNames("HipBoneRight", pelvicGirdleModels, "Hip bone.r");
+
+        CombineNodes("HipBone", "HipBoneLeft", "HipBoneRight");
+        CombineNodes("PelvicGirdle", "HipBone");
+
+        // ==================== Lower Limb ====================
+        AnatomyModelGroup lowerLimbGroup = level1ModelMap.GetGroup("LowerLimb");
+        List<Transform> lowerLimbModels = GetValidModels(lowerLimbGroup);
+
+        // Femur
+        AddByNames("FemurLeft", lowerLimbModels, "Femur.l");
+        AddByNames("FemurRight", lowerLimbModels, "Femur.r");
+        CombineNodes("Femur", "FemurLeft", "FemurRight");
+
+        // Patella
+        AddByNames("PatellaLeft", lowerLimbModels, "Patella.l");
+        AddByNames("PatellaRight", lowerLimbModels, "Patella.r");
+        CombineNodes("Patella", "PatellaLeft", "PatellaRight");
+
+        // Tibia
+        AddByNames("TibiaLeft", lowerLimbModels, "Tibia.l");
+        AddByNames("TibiaRight", lowerLimbModels, "Tibia.r");
+        CombineNodes("Tibia", "TibiaLeft", "TibiaRight");
+
+        // Fibula
+        AddByNames("FibulaLeft", lowerLimbModels, "Fibula.l");
+        AddByNames("FibulaRight", lowerLimbModels, "Fibula.r");
+        CombineNodes("Fibula", "FibulaLeft", "FibulaRight");
+
+        CombineNodes("Crus", "Tibia", "Fibula");
+
+        // Tarsal bones: each node combines left and right
+        AddByNames("__CalcaneusLeft", lowerLimbModels, "Calcaneus.l");
+        AddByNames("__CalcaneusRight", lowerLimbModels, "Calcaneus.r");
+        CombineNodes("Calcaneus", "__CalcaneusLeft", "__CalcaneusRight");
+
+        AddByNames("__TalusLeft", lowerLimbModels, "Talus.l");
+        AddByNames("__TalusRight", lowerLimbModels, "Talus.r");
+        CombineNodes("Talus", "__TalusLeft", "__TalusRight");
+
+        AddByNames("__NavicularLeft", lowerLimbModels, "Navicular bone.l");
+        AddByNames("__NavicularRight", lowerLimbModels, "Navicular bone.r");
+        CombineNodes("Navicular", "__NavicularLeft", "__NavicularRight");
+
+        AddByNames("__CuboidLeft", lowerLimbModels, "Cuboid bone.l");
+        AddByNames("__CuboidRight", lowerLimbModels, "Cuboid bone.r");
+        CombineNodes("Cuboid", "__CuboidLeft", "__CuboidRight");
+
+        AddByNames("__MedialCuneiformLeft", lowerLimbModels, "Medial cuneiform bone.l");
+        AddByNames("__MedialCuneiformRight", lowerLimbModels, "Medial cuneiform bone.r");
+        CombineNodes("MedialCuneiform", "__MedialCuneiformLeft", "__MedialCuneiformRight");
+
+        AddByNames("__IntermediateCuneiformLeft", lowerLimbModels, "Intermediate cuneiform bone.l");
+        AddByNames("__IntermediateCuneiformRight", lowerLimbModels, "Intermediate cuneiform bone.r");
+        CombineNodes("IntermediateCuneiform", "__IntermediateCuneiformLeft", "__IntermediateCuneiformRight");
+
+        AddByNames("__LateralCuneiformLeft", lowerLimbModels, "Lateral cuneiform bone.l");
+        AddByNames("__LateralCuneiformRight", lowerLimbModels, "Lateral cuneiform bone.r");
+        CombineNodes("LateralCuneiform", "__LateralCuneiformLeft", "__LateralCuneiformRight");
+
+        CombineNodes(
+            "TarsalBones",
+            "Calcaneus",
+            "Talus",
+            "Navicular",
+            "Cuboid",
+            "MedialCuneiform",
+            "IntermediateCuneiform",
+            "LateralCuneiform"
+        );
+
+        // Metatarsal bones
+        AddByNames("__FirstMetatarsalLeft", lowerLimbModels, "First metatarsal bone.l");
+        AddByNames("__FirstMetatarsalRight", lowerLimbModels, "First metatarsal bone.r");
+        CombineNodes("FirstMetatarsal", "__FirstMetatarsalLeft", "__FirstMetatarsalRight");
+
+        AddByNames("__SecondMetatarsalLeft", lowerLimbModels, "Second metatarsal bone.l");
+        AddByNames("__SecondMetatarsalRight", lowerLimbModels, "Second metatarsal bone.r");
+        CombineNodes("SecondMetatarsal", "__SecondMetatarsalLeft", "__SecondMetatarsalRight");
+
+        AddByNames("__ThirdMetatarsalLeft", lowerLimbModels, "Third metatarsal bone.l");
+        AddByNames("__ThirdMetatarsalRight", lowerLimbModels, "Third metatarsal bone.r");
+        CombineNodes("ThirdMetatarsal", "__ThirdMetatarsalLeft", "__ThirdMetatarsalRight");
+
+        AddByNames("__FourthMetatarsalLeft", lowerLimbModels, "Fourth metatarsal bone.l");
+        AddByNames("__FourthMetatarsalRight", lowerLimbModels, "Fourth metatarsal bone.r");
+        CombineNodes("FourthMetatarsal", "__FourthMetatarsalLeft", "__FourthMetatarsalRight");
+
+        AddByNames("__FifthMetatarsalLeft", lowerLimbModels, "Fifth metatarsal bone.l");
+        AddByNames("__FifthMetatarsalRight", lowerLimbModels, "Fifth metatarsal bone.r");
+        CombineNodes("FifthMetatarsal", "__FifthMetatarsalLeft", "__FifthMetatarsalRight");
+
+        CombineNodes(
+            "MetatarsalBones",
+            "FirstMetatarsal",
+            "SecondMetatarsal",
+            "ThirdMetatarsal",
+            "FourthMetatarsal",
+            "FifthMetatarsal"
+        );
+
+        // Toe phalanges
+        AddByNames("__BigToeProximalLeft", lowerLimbModels, "Proximal phalanx of first finger of foot.l");
+        AddByNames("__BigToeProximalRight", lowerLimbModels, "Proximal phalanx of first finger of foot.r");
+        CombineNodes("BigToeProximalPhalanx", "__BigToeProximalLeft", "__BigToeProximalRight");
+
+        AddByNames("__BigToeDistalLeft", lowerLimbModels, "Distal phalanx of first finger of foot.l");
+        AddByNames("__BigToeDistalRight", lowerLimbModels, "Distal phalanx of first finger of foot.r");
+        CombineNodes("BigToeDistalPhalanx", "__BigToeDistalLeft", "__BigToeDistalRight");
+
+        // Second toe
+        AddByNames("__SecondToeProximalLeft", lowerLimbModels, "Proximal phalanx of second finger of foot.l");
+        AddByNames("__SecondToeProximalRight", lowerLimbModels, "Proximal phalanx of second finger of foot.r");
+        CombineNodes("SecondToeProximalPhalanx", "__SecondToeProximalLeft", "__SecondToeProximalRight");
+
+        AddByNames("__SecondToeMiddleLeft", lowerLimbModels, "Middle phalanx of second finger of foot.l");
+        AddByNames("__SecondToeMiddleRight", lowerLimbModels, "Middle phalanx of second finger of foot.r");
+        CombineNodes("SecondToeMiddlePhalanx", "__SecondToeMiddleLeft", "__SecondToeMiddleRight");
+
+        AddByNames("__SecondToeDistalLeft", lowerLimbModels, "Distal phalanx of second finger of foot.l");
+        AddByNames("__SecondToeDistalRight", lowerLimbModels, "Distal phalanx of second finger of foot.r");
+        CombineNodes("SecondToeDistalPhalanx", "__SecondToeDistalLeft", "__SecondToeDistalRight");
+
+        // Third toe
+        AddByNames("__ThirdToeProximalLeft", lowerLimbModels, "Proximal phalanx of third finger of foot.l");
+        AddByNames("__ThirdToeProximalRight", lowerLimbModels, "Proximal phalanx of third finger of foot.r");
+        CombineNodes("ThirdToeProximalPhalanx", "__ThirdToeProximalLeft", "__ThirdToeProximalRight");
+
+        AddByNames("__ThirdToeMiddleLeft", lowerLimbModels, "Middle phalanx of third finger of foot.l");
+        AddByNames("__ThirdToeMiddleRight", lowerLimbModels, "Middle phalanx of third finger of foot.r");
+        CombineNodes("ThirdToeMiddlePhalanx", "__ThirdToeMiddleLeft", "__ThirdToeMiddleRight");
+
+        AddByNames("__ThirdToeDistalLeft", lowerLimbModels, "Distal phalanx of third finger of foot.l");
+        AddByNames("__ThirdToeDistalRight", lowerLimbModels, "Distal phalanx of third finger of foot.r");
+        CombineNodes("ThirdToeDistalPhalanx", "__ThirdToeDistalLeft", "__ThirdToeDistalRight");
+
+        // Fourth toe
+        AddByNames("__FourthToeProximalLeft", lowerLimbModels, "Proximal phalanx of fourth finger of foot.l");
+        AddByNames("__FourthToeProximalRight", lowerLimbModels, "Proximal phalanx of fourth finger of foot.r");
+        CombineNodes("FourthToeProximalPhalanx", "__FourthToeProximalLeft", "__FourthToeProximalRight");
+
+        AddByNames("__FourthToeMiddleLeft", lowerLimbModels, "Middle phalanx of fourth finger of foot.l");
+        AddByNames("__FourthToeMiddleRight", lowerLimbModels, "Middle phalanx of fourth finger of foot.r");
+        CombineNodes("FourthToeMiddlePhalanx", "__FourthToeMiddleLeft", "__FourthToeMiddleRight");
+
+        AddByNames("__FourthToeDistalLeft", lowerLimbModels, "Distal phalanx of fourth finger of foot.l");
+        AddByNames("__FourthToeDistalRight", lowerLimbModels, "Distal phalanx of fourth finger of foot.r");
+        CombineNodes("FourthToeDistalPhalanx", "__FourthToeDistalLeft", "__FourthToeDistalRight");
+
+        // Fifth toe
+        AddByNames("__FifthToeProximalLeft", lowerLimbModels, "Proximal phalanx of fifth finger of foot.l");
+        AddByNames("__FifthToeProximalRight", lowerLimbModels, "Proximal phalanx of fifth finger of foot.r");
+        CombineNodes("FifthToeProximalPhalanx", "__FifthToeProximalLeft", "__FifthToeProximalRight");
+
+        AddByNames("__FifthToeMiddleLeft", lowerLimbModels, "Middle phalanx of fifth finger of foot.l");
+        AddByNames("__FifthToeMiddleRight", lowerLimbModels, "Middle phalanx of fifth finger of foot.r");
+        CombineNodes("FifthToeMiddlePhalanx", "__FifthToeMiddleLeft", "__FifthToeMiddleRight");
+
+        AddByNames("__FifthToeDistalLeft", lowerLimbModels, "Distal phalanx of fifth finger of foot.l");
+        AddByNames("__FifthToeDistalRight", lowerLimbModels, "Distal phalanx of fifth finger of foot.r");
+        CombineNodes("FifthToeDistalPhalanx", "__FifthToeDistalLeft", "__FifthToeDistalRight");
+
+        CombineNodes(
+            "FootPhalanges",
+            "BigToeProximalPhalanx",
+            "BigToeDistalPhalanx",
+            "SecondToeProximalPhalanx",
+            "SecondToeMiddlePhalanx",
+            "SecondToeDistalPhalanx",
+            "ThirdToeProximalPhalanx",
+            "ThirdToeMiddlePhalanx",
+            "ThirdToeDistalPhalanx",
+            "FourthToeProximalPhalanx",
+            "FourthToeMiddlePhalanx",
+            "FourthToeDistalPhalanx",
+            "FifthToeProximalPhalanx",
+            "FifthToeMiddlePhalanx",
+            "FifthToeDistalPhalanx"
+        );
+
+        // Sesamoid bones
+        AddByNames("__SesamoidLeft", lowerLimbModels, "Sesamoid bones of foot.l");
+        AddByNames("__SesamoidRight", lowerLimbModels, "Sesamoid bones of foot.r");
+        CombineNodes("SesamoidBones", "__SesamoidLeft", "__SesamoidRight");
+
+        // Foot and Lower Limb
+        CombineNodes("Foot", "TarsalBones", "MetatarsalBones", "FootPhalanges", "SesamoidBones");
+        CombineNodes("LowerLimb", "Femur", "Patella", "Crus", "Foot");
+
+        // ==================== SKULL ====================
         AnatomyModelGroup skullGroup =
             level1ModelMap.GetGroup("Skull");
 
